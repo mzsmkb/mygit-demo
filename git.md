@@ -89,4 +89,7 @@ git在存储文件时，每一次代码的提交都会创建一个与之对应�
 * git remote 查看当前的远程库
 * git remote add <名字> <远程库地址>
 * git remote remove <名字>
-* git push -u <远程库名> <分支名>   同远程库
+* git push -u <远程库名> <分支名>   #同远程库
+  * 链接之后可以直接git push
+* git clone <远程库地址>  xxx  #下载远程库到当前目录，且命名为xxx
+  * 之后就可以直接git push了，因为已经直接链接到远程库了
