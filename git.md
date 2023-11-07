@@ -90,14 +90,27 @@ git在存储文件时，每一次代码的提交都会创建一个与之对应�
 * git remote add <名字> <远程库地址>
 * git remote remove <名字>
 * git push -u <远程库名> <分支名>   #同远程库
+
   * 链接之后可以直接git push
   * git push <远程库> <本地分支>:<远程分支>
 * git clone <远程库地址>  xxx  #下载远程库到当前目录，且命名为xxx
+
   * 之后就可以直接git push了，因为已经直接链接到远程库了
 * 如果本地的版本低于远程库的版本，push是默认推不上去的，就和上面出现的小问题报错一样的情况
+
   * 解决方法
     * git fetch   要解决必须让本地版本与远程库同步
       * fetch会从远程库下载所有代码，但是他不会将代码和当前分支自动合并
       * 使用fetch拉去代码后，必须手动对代码进行合并
         * git merge origin/main   意思就是将本地的分支与远程库origin的main分支合并，就是正常的合并步骤
     * git pull 从服务器上拉取代码并自动合并，就和上面那个报错的解决方法一样的
+
+
+
+# Tag标签
+
+* git switch <分支id> --detach
+* git tag <标签名>
+  * 之后可以快速找到该节点
+  * git switch <标签名>
+  * git push origin <标签名>  push指定的节点
